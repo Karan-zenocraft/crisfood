@@ -1,0 +1,957 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Crisfood</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../image/logo.png">
+    <!-- Bootstrap CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <!-- Ionicons CSS -->
+    <link href="../css/ionicons.min.css" rel="stylesheet">
+    <!-- Material Icons CSS -->
+    <link href="../css/materialdesignicons.min.css" rel="stylesheet">
+    <!-- Slick CSS -->
+    <link href="../css/slick.css" rel="stylesheet">
+    <link href="../css/slick-theme.css" rel="stylesheet">
+    <!-- Semantic CSS -->
+    <link href="../css/semantic.min.css" rel="stylesheet">
+    <!-- Style CSS -->
+    <link href="../css/style.css" rel="stylesheet">
+    <style>
+    .pac-container {
+        z-index: 9999999999999999999 !important;
+    }
+</style>
+<style>
+        .header-top {
+    position: relative;
+    z-index: 99999;
+    background: #1d1c1c;
+    font-size: 12px;
+    width: 100%;
+    padding: 11px 20px;
+    color: #fff;
+    text-align: center;
+    }
+    .header-top p {
+    color: #fff;
+    margin-bottom: 0px;
+    }
+    span.cross-icon.pull-right i {
+    color: #fff;
+    }
+    span.cross-icon.pull-right i:hover {
+    cursor: pointer;
+    }
+    .fixedmenu {
+    top: 0px;
+    }
+    </style>
+
+    </head>
+
+<body class="example-1  scrollbar-dusty-grass square thin">
+    
+
+    <!------Loader------->
+
+
+    
+<div id="Load" class="load">
+      <div class="load__container">
+        
+        <img src="../image/logo.png" alt="Loader" class="img-fluid">
+        
+        
+        
+      </div>
+    </div>
+
+    <!-- Main Wrapper Starts -->
+    <div class="main-wrapper pusher">
+        
+
+    <nav class="navbar nav-main affix-top" data-spy="affix" data-offset-top="100" style="background: #e7e7e7;">
+        <div class="container-fluid">
+            <div class="navbar-header logo">
+                <a class="navbar-brand" href="../index.html"><img
+                        src="../image/logo.png"></a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target=".navbar-collapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse" id="myNavbar" aria-expanded="false"
+                style="height: 1px;">
+                <ul class="nav navbar-nav navbar-right menu">
+                    <li><a href="../index.html" class=""><span>Home</span></a></li>
+                    <!-- <li><a href="https://crisfood.com/services" class=""><span>Services</span></a></li> -->
+                    <li><a href="../index.html" class=""><span>Services</span></a></li>
+                    <!-- <li><a href="https://crisfood.com/partner" class=""><span>Our Partner</span></a></li> -->
+                    <!-- <li><a href="#" class=""><span>Become Our Partner</span></a></li> -->
+                    <li><a href="contact.html" class=""><span>Contact Us</span></a></li>
+                    <li><a href="aboutus.html" class=""><span>About</span></a></li>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+        <!-- Header Ends -->
+    <!-- End Header =============================================== -->
+    <form id="home_page_back" action="https://crisfood.com/restaurants" style="display:none">
+        <input type="hidden"  value="" name="search_loc">
+        <input type="hidden"  name="latitude" value="" readonly >
+        <input type="hidden"  name="longitude" value="" readonly >
+    </form>
+    <!-- End Map -->
+    
+    <div class="row gray-section no-margin">
+    <div class="container">
+        <div class="content-block">
+            <h2>Privacy Policy</h2>
+            <div class="title-divider"></div>
+            <p><pre>
+This Privacy Policy (&ldquo;Policy&rdquo;) describes the policies and procedures on the collection, use, disclosure and protection of your information when you use our website located at crisfood.com, or the Crisfood mobile application (collectively, &ldquo;Crisfood Platform&rdquo;) made available by Crisfood Online LLP (&ldquo;Crisfood&rdquo;, &ldquo;Company&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo; and &ldquo;our&rdquo;),  a Limited Liability Partnership company established under the laws of India having its registered office at H. No.39, R. No.06, 4th Floor Bandar Mohalla Bhiwandi,Thane 421302.
+
+The terms &ldquo;you&rdquo; and &ldquo;your&rdquo; refer to the user of the Crisfood Platform. The term &ldquo;Services&rdquo; refers to any services offered by Crisfood whether on the Crisfood Platform or otherwise.
+
+Please read this Policy before using the Crisfood Platform or submitting any personal information to Crisfood. This Policy is a part of and incorporated within, and is to be read along with, the Terms of Use.
+    </pre></p>
+        </div>
+    </div>
+</div>
+    
+  
+    <script src="https://crisfood.com/assets/user/js/jquery.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://crisfood.com/assets/user/js/bootstrap.min.js"></script>
+    <!-- Slick Slider JS -->
+    <script src="https://crisfood.com/assets/user/js/slick.min.js"></script>
+    <!-- Sidebar JS -->
+    <script src="https://crisfood.com/assets/user/js/asidebar.jquery.js"></script>
+    <!-- Map JS -->
+   <script>
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+</script>
+ <!-- Login Sidebar Starts -->
+    <div class="aside right-aside location" id="login-sidebar">
+        <div class="aside-header">
+            <span class="close" data-dismiss="aside"><i class="ion-close-round"></i></span>
+        </div>
+        <div class="aside-contents">
+            <!-- Login Content Starts -->
+            <div class="login-content">
+                
+                    <!-- Login Form Section Starts -->
+                    <div class="login-form-sec">
+                        <h5 class="login-tit">Login</h5>
+                        <div class="social-login">
+                           <a href="javascript::void(0);" onclick="FBLogin(2);"  class="social-login-item"><i class="ion-social-facebook"></i></a>
+                            <a id="sign-in-or-out-button" data-id="login" href="javascript:void(0);" class="social-reg sign-in-or-out-button social-login-item"><i class="ion-social-google"></i></a>
+                            <form  id="login_form" action="https://crisfood.com/social/login" method="post" >
+                                <input type="hidden" name="_token" value="FGmrjGCiCs15XGeQKOXHJwC1XYz2wJ9CWaCMZ4Dx">
+                            <input type="hidden" id="login_by" value="" name="login_by" />
+                            <input type="hidden" name="accessToken" value="" id="accessToken" />
+                            <input type="hidden" name="login_type" value="" id="login_type" />
+                            <input type="button" id="login_social_btn" style="display:none" value="submit" />
+
+                    </form>
+                        </div>
+                        <div class="or">Or</div>
+                        <form  role="form" method="POST" action="https://crisfood.com/login" class="popup-form" id="myLogin">
+                            <div id="login_form_error" class="print-error-msg"><ul class="alert-danger list-unstyled"></ul></div>
+                        <input type="hidden" name="_token" value="FGmrjGCiCs15XGeQKOXHJwC1XYz2wJ9CWaCMZ4Dx">
+                            <!-- <div class="form-group">
+                                <label>Contact Details</label>
+                                <input type="text" id="phone" name="phone" class="form-control">
+                                
+                            </div> -->
+                            <div class="form-group row">
+                            <div class="col-xs-12">
+                                <label>Contact Details</label>
+                            </div>
+                           
+                            <div class="col-xs-3">
+                                <input type="text" id="login_code" name="login_code" class="form-control country_code" placeholder="+56">
+                            </div>
+                            <div class="col-xs-9 p-l-0">
+                                <input type="phone" class="form-control phone-number" id="phone" name="phone" value="" placeholder="Enter Phone Number" maxlength="10" onkeypress="return phoneNumberKey(event);" required>
+                            </div> 
+                                                
+                        </div>
+                            <div class="print-error-msg alert-danger error_phone"></div> 
+                            <div class="form-group">
+                                <label>Password</label>
+                                <input type="password" id="login_password" name="password" placeholder="Enter Password" class="form-control">
+                            </div>
+                            <div class="print-error-msg alert-danger error_password"></div> 
+                            <a href="javascript:void(0);" class="theme-link forgot-link">Forgot Your Password</a>
+                            <button type="button" class="login-btn login_btn">Login</button>
+                         </form>
+                    </div>
+                    <!-- Login Form Section Ends -->
+                    <!-- Forgot Form Section Starts -->
+                    <div class="forgot-form-sec">
+                       
+                        <form class="form-horizontal" role="form" method="POST" action="https://crisfood.com/password/email">
+                            <input type="hidden" name="_token" value="FGmrjGCiCs15XGeQKOXHJwC1XYz2wJ9CWaCMZ4Dx">
+                            <h5 class="login-tit">Forgot Your Password</h5>
+                            <div class="form-group">
+                                <label>Email Address</label>
+                                <input type="email" name="email" value="" required class="form-control">
+                            </div>
+                            <button type="submit" class="login-btn forgot-btn ">Submit</button>
+                        </form>
+                         <button type="button" class="forgot-btn login-btn login-link">Login</button>
+                    </div>
+                    <!-- Forgot Form Section Ends -->
+               
+            </div>
+            <!-- Login Content Ends -->
+            
+        </div>
+    </div>
+    <!-- Login Sidebar Ends -->
+    <!-- Signup Sidebar Starts -->
+     <!-- Signup Sidebar Starts -->
+    <div class="aside right-aside location" id="signup-sidebar">
+        <div class="aside-header">
+            <span class="close" data-dismiss="aside"><i class="ion-close-round"></i></span>
+        </div>
+        <div class="aside-contents">
+            <!-- Login Head Starts -->
+            <div class="login-head row">
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <h5 class="login-tit">Sign Up</h5>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12 text-right">
+                    <!-- <img src="img/login-icon.jpg" class="login-icon"> -->
+                </div>
+            </div>
+            <!-- Login Head Ends -->
+           
+            <!-- Login Content Starts -->
+            <div class="login-content">
+                <form  class="popup-form" method="POST" id="register_form" action="https://crisfood.com/register">
+                     
+                     <input type="hidden" name="_token" value="FGmrjGCiCs15XGeQKOXHJwC1XYz2wJ9CWaCMZ4Dx">
+                    <div class="social-login">
+                        <a href="javascript::void(0);" onclick="FBLogin(1);" class="social-login-item"><i class="ion-social-facebook"></i></a>
+                        <a id="sign-in-or-out-button"  data-id="register" href="javascript:void(0);" class="social-reg sign-in-or-out-button social-login-item"><i class="ion-social-google"></i></a>
+                    </div>
+                    <div class="or">Or</div>
+                    <div id="first_step">
+                        <div class="print-error-msg common">
+                            <ul class="alert-success list-unstyled"><li class="error_error"></li></ul>
+                        </div>   
+                        <input type="text" class="form-control form-white dm" placeholder="Name" id="dname" name="name" value="">
+                        <input type="email" class="form-control form-white dm" id="demail" name="email"  value="" placeholder="Email Address">
+                        <div class="form-group row">
+                            <div class="col-xs-12">
+                                <label>Contact Details</label>
+                            </div>
+                           
+                            <div class="col-xs-3">
+                                <input type="text" id="country_code" name="country_code" class="country_code form-control" placeholder="+56">
+                            </div>
+                            <div class="col-xs-9 p-l-0">
+                                <input type="number" min="0" class="form-control phone-number" id="phone_number" name="phone_number" value="" placeholder="Enter Phone Number" maxlength="10" onkeypress="return isNumberKey(event);" required>
+                            </div> 
+                                                
+                        </div>
+                        <div class="print-error-msg alert-danger error_phone"></div>  
+                        <input type="hidden" id="login_by" value="" name="login_by" />
+                        <input type="hidden" name="accessToken" value="" id="accessToken" />
+                        <div class="form-group mobile_otp_verfication" style="display: none;">
+                            <label>Otp</label>
+                            <input type="text" class="form-control " placeholder="Enter Phone Number" name="otp" id="otp" value="" >
+                        </div>
+                        <div class="print-error-msg alert-danger error_otp"></div> 
+                        <button type="button" onclick="smsLogin();" class="login-btn mobile_verfication">user.create.verify_phone</button>
+                        <button type="button" class="login-btn mobile_otp_verfication" onclick="checkotp();" value="Verify Otp" style="display: none;">Verify OTP</button>
+                    </div>
+                    <div id="second_step" style="display: none;">
+                        <input type="hidden" id="otp_ref"  name="otp_ref" value="" />
+                        <input type="hidden" id="otp_phone"  name="phone" value="" />
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input type="text" class="form-control" id="name" name="name" value="" >
+                            <div class="print-error-msg alert-danger error_name"></div> 
+                        </div>
+                        <div class="form-group">
+                            <label>Email Address</label>
+                            <input type="text" class="form-control" id="email" name="email"  value="" placeholder="">
+                            <div class="print-error-msg alert-danger error_email"></div> 
+                        </div>
+                        <div class="form-group"  id="password1">
+                            <label>Password</label>
+                            <input type="password" class="form-control" id="password" name="password">
+                            <div class="print-error-msg alert-danger error_password"></div> 
+                        </div>
+                         <div class="form-group" id="password2">
+                            <label>Confirm Password</label>
+                            <input type="password" class="form-control" id="password_confirmation"  name="password_confirmation">
+                        </div>
+                           <p class="signup-txt"> <input type="checkbox" checked  value="accept_2" id="check_2" name="check_2" />
+                            By creating an account, I accept the Terms & Conditions</p>
+                        <div class="print-error-msg alert-danger error_terms"></div> 
+                        <button type="button" class="login-btn register_btn">Sign Up</button>
+                        <br/><br/><br/>
+                    </div>
+                </form>
+            </div>
+            <!-- Login Content Ends -->
+        </div>
+    </div>
+    <!-- Signup Sidebar Ends -->
+ <script src="https://crisfood.com/assets/user/js/jquery.easy-autocomplete.js" type="text/javascript"></script>
+ <link rel="stylesheet" type="text/css" href="https://crisfood.com/assets/user/css/easy-autocomplete.min.css">
+    <style type="text/css">
+        .easy-autocomplete-container ul { max-height: 200px !important; overflow: auto !important; }
+        .easy-autocomplete { width:200px!important; }
+        .phone_fileds {
+            margin-left: 0px !important;
+            border-left: 1px solid #ccc !important;
+            width: 100% !important
+        }
+        .no-pad{
+            padding: 0px !important;
+        }
+    </style>
+<script>
+function phoneNumberKey(evt)
+{
+    console.log('hi');
+    var charCode = (evt.which) ? evt.which : event.keyCode;
+    if (charCode != 46 && charCode > 31 
+    && (charCode < 48 || charCode > 57))
+        return false;
+
+    return true;
+}    
+function isNumberKey(evt)
+{
+    var edValue = document.getElementById("phone_number");
+    var s = edValue.value;
+    if (event.keyCode == 13) {
+        event.preventDefault();
+        if(s.length>=10){
+            smsLogin();
+        }
+    }
+    var charCode = (evt.which) ? evt.which : event.keyCode;
+    if (charCode != 46 && charCode > 31 
+    && (charCode < 48 || charCode > 57))
+        return false;
+
+    return true;
+}    
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+var options = {
+
+  url: "https://crisfood.com/assets/user/js/countryCodes.json",
+
+  getValue: "dial_code",
+
+  list: {
+    match: {
+      enabled: true
+    },
+    onClickEvent: function() {
+            var value = $(".country_code").getSelectedItemData().dial_code;
+
+            $(this).val(value).trigger("change");
+        },
+    maxNumberOfElements: 1000
+  },
+  minCharNumber: 1,
+  template: {
+    type: "custom",
+    method: function(value, item) {
+      return "<span class='flag flag-" + (item.dial_code).toLowerCase() + "' ></span>" +value+" ( "+item.name+" ) ";
+    }
+  },
+
+  theme: "round"
+};
+$(".country_code").easyAutocomplete(options);
+ var my_otp='';
+    function smsLogin(){
+        var countryCode = document.getElementById("country_code").value;
+        var phoneNumber = document.getElementById("phone_number").value;
+        if(countryCode!=''){
+            //var code = $('.selected-dial-code').html();
+            //$('#country_code').val(code);
+            var countryCode = document.getElementById("country_code").value;
+            var phoneNumber = document.getElementById("phone_number").value;
+            var accessToken = $("#register_form #accessToken").val();
+            var login_by = $("#register_form #login_by").val();
+            var phone;
+            $('#otp_phone').val(countryCode+''+phoneNumber);
+            var csrf = $("input[name='_token']").val();;
+            if(phoneNumber!=''){
+                phone = countryCode+''+phoneNumber;
+            }else{
+                phone = '';
+            }
+            $.ajax({
+                url: "https://crisfood.com/otp",
+                type:'POST',
+                data:{ phone :phone ,'_token':csrf ,'login_by':login_by,'accessToken':accessToken},
+                success: function(data) { 
+                    if($.isEmptyObject(data.error)){
+                        my_otp=data.otp;
+                        $('.mobile_otp_verfication').show();
+                        $('.mobile_verfication').hide();
+                        $('.mobile_verfication').html("<p class='helper'> Please Wait... </p>");
+                        $('#phone_number').attr('readonly',true);
+                        $('#country_code').attr('readonly',true);
+                        // $('#otp').val(data.otp);
+                        // $('#otp').attr('readonly',true);
+                        $("#register_form .common").html('<ul class="list-unstyled"></ul>');
+                        $(".alert-danger").css("display", "none");
+                        $("#register_form .common").find('ul').removeClass('alert-danger').addClass('alert-success');
+                        $("#register_form .common").find("ul").append('<li>'+data.message+'</li>');
+                    }else{ 
+                        printErrorMsg(data.error,'register_form');
+                    }
+                },
+                error:function(jqXhr,status) { 
+                    if(jqXhr.status === 422) {
+                        $(".alert-danger").css("display", "block");
+                        $("#register_form .print-error-msg").html('');
+                        $("#register_form .common").html('<ul class="list-unstyled"><li class="error_error "></li></ul>');
+                        $("#register_form .print-error-msg").show();
+                        var errors = jqXhr.responseJSON;
+                        $.each( errors , function( key, value ) { 
+                            if(key=='error'){
+                                $("#register_form .common").find('ul').removeClass('alert-success').addClass('alert-danger');
+                            }
+                            $("#register_form").find(".error_"+key).html(value);
+                        }); 
+                    } 
+                }
+
+            });
+        }else{
+            $(".alert-danger").css("display", "block");
+            $("#register_form").find(".error_phone").html('');
+            $("#register_form").find(".error_phone").html('Country code Required');
+
+        }
+    }
+    function checkotp(){
+        var countryCode = document.getElementById("country_code").value;
+        var phoneNumber = document.getElementById("phone_number").value;
+        var otp = document.getElementById("otp").value;
+        if(otp){
+            var csrf = $("input[name='_token']").val();;
+            if(phoneNumber!=''){
+                phone = countryCode+''+phoneNumber;
+            }else{
+                phone = '';
+            }
+            $.ajax({
+                url: "https://crisfood.com/verify-otp",
+                type:'POST',
+                data:{ phone :phone ,otp :otp,'_token':csrf},
+                success: function(data) {
+                    if($.isEmptyObject(data.error)){
+                        $("#register_form .print-error-msg").find("ul").html('');
+                        $('#mobile_otp_verfication').html("<p class='helper'> Please Wait... </p>");
+                        $('#phone_number').attr('readonly',true);
+                        $('#country_code').attr('readonly',true);
+                        $('.mobile_otp_verfication').hide();
+                        $('#second_step').fadeIn(400);
+                        $('.register_btn').show();
+                        $('.dm').hide();
+                        $('#mobile_verfication').show().html("<p class='helper'> * Phone Number Verified </p>");
+                    }else{
+                        printErrorMsg(data.error,'register_form');
+                    }
+                },
+                error:function(jqXhr,status) {
+                    if(jqXhr.status === 422) {
+                        $(".alert-danger").css("display", "block");
+                        $("#register_form .print-error-msg").html('');
+                        $("#register_form .common").html('<ul class="list-unstyled"><li class="error_error "></li></ul>');
+                        $("#register_form .print-error-msg").show();
+                        var errors = jqXhr.responseJSON;
+                        $.each( errors , function( key, value ) {
+                            if(key=='error'){
+                                $("#register_form .common").find('ul').removeClass('alert-success').addClass('alert-danger');
+                            }
+                            $("#register_form").find(".error_"+key).html(value);
+                        });
+                    }
+                }
+
+            });
+        }else{
+            $("#register_form .print-error-msg").html('');
+            $("#register_form").find(".error_otp").html('Otp field is required');
+        }
+    }
+    $('#dname').on('blur',function(){
+        $("#register_form #name").val($('#dname').val());
+    });
+    $('#demail').on('blur',function(){
+        $("#register_form #email").val($('#demail').val());
+    })
+    function printErrorMsg (msg,form) { 
+        $("#"+form+".common").find('ul').html('');
+        $("#"+form+".common").css('display','block');
+        $("#"+form+".common").show(); 
+        if (typeof msg === 'string'){
+            $("#"+form+".common").find('ul').removeClass('alert-success').addClass('alert-danger');
+            $("#"+form+".common").find('ul').append('<li>'+msg+'</li>');
+        }else{
+            $.each( msg, function( key, value ) {
+                $("#"+form+".print-error-msg").find('ul').append('<li>'+value+'</li>');
+            });
+        }
+    }
+    $('#pac-input').keypress(function (e) {
+        var key = e.which;
+        if(key == 13)  // the enter key code
+          {
+            if($('#pac-input').val()==''){
+                 $('#my_map_form_current').submit();
+            }else{
+                if($('#my_map_form #latitude').val()!='' && $('#my_map_form #longitude').val()!=''){
+                    $('#my_map_form').submit();
+                }else{
+                  return false;  
+                }
+            }
+            return false;
+        }
+    });   
+    $('.findfood').on('click',function () {
+         
+        if($('#pac-input').val()==''){
+             $('#my_map_form_current').submit();
+        }else{
+            $('#my_map_form').submit();
+        }
+           
+    });  
+    $('.signinform').on('click',function(){
+        $("#myLogin .print-error-msg").html(''); 
+        $("#myLogin #phone").val('');
+        $("#myLogin #password").val('');
+        $('#login-sidebar').asidebar('open');
+        $('.login-link').trigger('click');
+    });
+    $('.signupform').on('click',function(){
+        $("#register_form .print-error-msg").html('');
+        $("#register_form #country_code").val('');
+        $("#register_form #country_code").prop('readonly',false);
+        $("#register_form #phone_number").val('');
+        $("#register_form #phone_number").prop('readonly',false);
+        $("#register_form #otp").val('');
+        $("#register_form #otp").prop('readonly',false);
+        $("#register_form #name").val('');
+        $("#register_form #email").val('');
+        $("#register_form #password").val('');
+        $("#register_form #password_confirmation").val('');
+        $('.mobile_otp_verfication').hide();
+        $('.mobile_verfication').show();
+         $('.mobile_verfication').html('Verify Phone Number');
+        $('#second_step').hide();
+        $('.dm').hide();
+        $("#register_form #accessToken").val('');
+        $("#register_form #login_by").val('');
+        $('#signup-sidebar').asidebar('open');
+    });
+    $("#login_password").on('keypress',function(){
+       
+        if (event.keyCode == 13) {
+            event.preventDefault();
+            $('.login_btn').trigger('click');
+        }
+    });
+    $('.login_btn').on('click',function(){
+        var Ccode = document.getElementById("login_code").value;
+        
+        if(Ccode==''){
+            $("#myLogin .print-error-msg").html('');
+            $("#myLogin .print-error-msg").show();
+            $("#myLogin").find(".error_phone").html('Country code required');
+            return false;
+        } 
+        var password = document.getElementById("login_password").value;
+        var phoneNumber = Ccode+document.getElementById("phone").value;
+        var csrf = $("input[name='_token']").val();;
+        $.ajax({
+            url: "https://crisfood.com/login",
+            type:'POST',
+            data:{ phone : phoneNumber,password:password,'_token':csrf },
+            success: function(data) { 
+                if($('#latitude_cur').val()){
+                        $('#my_map_form_current').submit();
+                    }else{
+                        location.reload();
+                    }
+            },
+            error:function(jqXhr,status) { 
+                if(jqXhr.status === 422) {
+                    $("#myLogin .print-error-msg").html('');
+                    $("#myLogin .print-error-msg").show();
+                    var errors = jqXhr.responseJSON;
+                    console.log(errors);
+                    $.each( errors , function( key, value ) { 
+                        $("#myLogin").find(".error_"+key).html(value);
+                    }); 
+                } 
+            }
+        });
+    });
+    $('.register_btn').on('click',function(){ 
+        var csrf = $("input[name='_token']").val();;
+        if($('#check_2').is(':checked')){
+            $.ajax({
+                url: "https://crisfood.com/register",
+                type:'POST',
+                data:$('#register_form').serialize(),
+                success: function(data) { 
+                    if($('#latitude_cur').val()){
+                        $('#my_map_form_current').submit();
+                    }else{
+                        location.reload();
+                    }
+                },
+                error:function(jqXhr,status) { 
+                    if(jqXhr.status === 422) {
+                        $("#register_form .print-error-msg").html('');
+                        $("#register_form .print-error-msg").show();
+                        var errors = jqXhr.responseJSON;
+                       
+                        $.each( errors , function( key, value ) { 
+                            $("#register_form").find(".error_"+key).html(value);
+                        }); 
+                    } 
+                }
+            });
+        }else{
+            $("#register_form .print-error-msg").html('');
+            $("#register_form .print-error-msg").show();
+            $("#register_form").find(".error_terms").html('Please Check Term & Condition'); 
+        }
+    });
+
+     $('#login_social_btn').on('click',function(){ 
+        var csrf = $("input[name='_token']").val();;
+        
+            $.ajax({
+                url: "https://crisfood.com/social/login",
+                type:'POST',
+                data:$('#login_form').serialize(),
+                success: function(data) { 
+                    if($('#latitude_cur').val()){
+                        $('#my_map_form_current').submit();
+                    }else{
+                        location.reload();
+                    }
+                },
+                error:function(jqXhr,status) { 
+                    if(jqXhr.status === 422) {
+                        $("#login_form_error").html('<ul class="alert-danger"></ul>');
+                        $("#login_form_error").show();
+                        var errors = jqXhr.responseJSON;
+                        console.log(errors);
+                        $.each( errors , function( key, value ) { 
+                            //alert(value);
+                            $("#login_form_error").find("ul").append('<li>'+value+'</li>');
+                        }); 
+                    } 
+                }
+            });
+    });
+/*$('.login_btn').on('click',function(){ 
+        var password = document.getElementById("password").value;
+        var phoneNumber = document.getElementById("phone").value;
+        var csrf = $("input[name='_token']").val();;
+        $.ajax({
+            url: "https://crisfood.com/login",
+            type:'POST',
+            data:{ phone : phoneNumber,password:password,'_token':csrf },
+            success: function(data) { 
+                //window.location.href = "https://crisfood.com/home";
+                if($('#latitude_cur').val()){
+                $('#my_map_form_current').submit();
+                }else{
+                    location.reload();
+                }
+            },
+            error:function(jqXhr,status) { 
+                if(jqXhr.status === 422) {
+                    $("#login_form_error ").find("ul").html('');
+                    $("#login_form_error").show();
+                    var errors = jqXhr.responseJSON;
+                    console.log(errors);
+                    $.each( errors , function( key, value ) { 
+                        $("#login_form_error").find("ul").append('<li>'+value+'</li>');
+                    }); 
+                } 
+            }
+        });
+    });*/
+
+$('.dm').hide();
+  // This is called with the results from from FB.getLoginStatus().
+function statusChangeCallback(response) {
+
+  if (response.status === 'connected') {
+      // Logged into your app and Facebook.
+      // we need to hide FB login button
+      $('#register_form #accessToken').val(response.authResponse.accessToken);
+      $('#register_form #login_by').val('facebook');
+      //fetch data from facebook
+      getUserInfo();
+  } else if (response.status === 'not_authorized') {
+      // The person is logged into Facebook, but not your app.
+      $('#status').html('Please log into this app.');
+  } else {
+      // The person is not logged into Facebook, so we're not sure if
+      // they are logged into this app or not.
+      $('#status').html('Please log into facebook');
+  }
+}
+
+// This function is called when someone finishes with the Login
+// Button.  See the onlogin handler attached to it in the sample
+// code below.
+function checkLoginState() {
+  FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+  });
+}
+
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : "290984818086469",
+      cookie     : true,  // enable cookies to allow the server to access 
+                          // the session
+      xfbml      : true,  // parse social plugins on this page
+      version    : 'v2.5' // use version 2.3
+    });
+
+    /*FB.getLoginStatus(function(response) {
+      statusChangeCallback(response);
+    });*/
+
+  };
+
+    // Now that we've initialized the JavaScript SDK, we call 
+  // FB.getLoginStatus().  This function gets the state of the
+  // person visiting this page and can return one of three states to
+  // the callback you provide.  They can be:
+  //
+  // 1. Logged into your app ('connected')
+  // 2. Logged into Facebook, but not your app ('not_authorized')
+  // 3. Not logged into Facebook and can't tell if they are logged into
+  //    your app or not.
+  //
+  // These three cases are handled in the callback function.
+
+  // Load the SDK asynchronously
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+
+function getUserInfo() {
+    FB.api('/me?fields=email,name,first_name,last_name', function(response) {
+        $('#register_form #email').val(response.email);
+        $('#register_form #name').val(response.name);
+        $('#register_form #demail').val(response.email);
+        $('#register_form #dname').val(response.name);
+        $('#register_form #social_login_id').val(response.id);
+        $('#register_form #password1').hide();
+        $('#register_form #password2').hide();
+        $('.dm').show();
+    });
+}
+function FBLogin(id)
+{
+
+      FB.login(function(response) {
+         if (response.authResponse) 
+         {   
+            //var access_token = response.session.access_token;
+            if(id==1){
+                $('#register_form #accessToken').val(response.authResponse.accessToken);
+                $('#register_form #login_by').val('facebook');
+                getUserInfo(); //Get User Information.
+            }else if(id==2){
+                $('#login_form #accessToken').val(response.authResponse.accessToken);
+                $('#login_form #login_by').val('facebook');
+                $('#login_form #login_type').val('2');
+                $('#login_form #login_social_btn').trigger('click');
+            }   
+          } else
+          {
+           alert('Authorization failed.');
+          }
+       },{scope: 'public_profile,email'});
+}
+</script>
+<script type="text/javascript">
+    $('.sign-in-or-out-button').click(function() { 
+        handleSignInClick(); 
+        if($(this).data('id')=='login'){ 
+            $('#login_type').val(2); 
+            if($('#login_form #accessToken').val()==''){
+                makeApiCall();
+            $('#login_social_btn').trigger('click');
+            }
+            
+        }else{
+            $('#register_form #password1').hide();
+            $('#register_form #password2').hide();
+            $('#login_type').val(1);
+            if($('#register_form #accessToken').val()==''){
+                makeApiCall();
+            }
+            
+            
+        }
+    });
+    function handleClientLoad() {
+        // Loads the client library and the auth2 library together for efficiency.
+        // Loading the auth2 library is optional here since `gapi.client.init` function will load
+        // it if not already loaded. Loading it upfront can save one network request.
+        gapi.load('client:auth2', initClient);
+    }
+        var discoveryUrl = 'https://www.googleapis.com/discovery/v1/apis/drive/v3/rest';
+        var SCOPE = 'https://www.googleapis.com/auth/drive.metadata.readonly';
+    function initClient() {
+        // Initialize the client with API key and People API, and initialize OAuth with an
+        // OAuth 2.0 client ID and scopes (space delimited string) to request access.
+        gapi.client.init({
+            apiKey: "AIzaSyDQtBBSB6vmwb6FvvoHvblkthOihR0yBvg",
+            discoveryDocs: [discoveryUrl],
+            clientId: "155479539159-ie8l0ilsel12f5hkejdt69k2uv3ctfh5.apps.googleusercontent.com",
+            scope: SCOPE
+        }).then(function () {
+          // Listen for sign-in state changes.
+          gapi.auth2.getAuthInstance().isSignedIn.listen(updateSigninStatus);
+
+          // Handle the initial sign-in state.
+          //updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
+        });
+    }
+
+    function updateSigninStatus(isSignedIn) { 
+        // When signin status changes, this function is called.
+        // If the signin status is changed to signedIn, we make an API call.
+        if (isSignedIn) {
+            setSigninStatus();
+          //makeApiCall();
+        }
+    }
+
+    function handleSignInClick(event) {
+        // Ideally the button should only show up after gapi.client.init finishes, so that this
+        // handler won't be called before OAuth is initialized.
+        gapi.auth2.getAuthInstance().signIn();
+    }
+
+    function handleSignOutClick(event) {
+        gapi.auth2.getAuthInstance().signOut();
+    }
+
+    function makeApiCall() {  
+        var id = $('#login_type').val(); 
+        var user = gapi.auth2.getAuthInstance().currentUser.get();
+        var profile = gapi.auth2.getAuthInstance().currentUser.get().getBasicProfile();
+        
+        if(id==1){
+                $('#register_form #accessToken').val(gapi.client.getToken().access_token);
+                $('#register_form #login_by').val('google');
+                $('#register_form #email').val(profile.getEmail());
+                $('#register_form #name').val(profile.getName());
+                 $('#register_form #demail').val(profile.getEmail());
+                $('#register_form #dname').val(profile.getName());
+                $('.dm').show();
+
+        }else if(id==2){ 
+             $('#login_form #accessToken').val(gapi.client.getToken().access_token);
+             $('#login_form #login_by').val('google');
+        }
+        
+    }
+
+    function setSigninStatus(isSignedIn) { 
+        var user = gapi.auth2.getAuthInstance().currentUser.get();
+        var profile = gapi.auth2.getAuthInstance().currentUser.get().getBasicProfile();
+        console.log(profile);
+        var isAuthorized = user.hasGrantedScopes(SCOPE); 
+        var id = $('#login_type').val(); 
+        if (isAuthorized) {
+            if(id==1){
+                $('#register_form #accessToken').val(gapi.client.getToken().access_token);
+                $('#register_form #login_by').val('google');
+                $('#register_form #email').val(profile.getEmail());
+                $('#register_form #name').val(profile.getName());
+                $('#register_form #demail').val(profile.getEmail());
+                $('#register_form #dname').val(profile.getName());
+                $('.dm').show();
+
+            }else if(id==2){ 
+                $('#login_form #accessToken').val(gapi.client.getToken().access_token);
+                $('#login_form #login_by').val('google');
+                $('#login_social_btn').trigger('click');
+            }
+           
+        } else {
+          $('#register_form #accessToken').val('');
+            $('#register_form #login_by').val('');
+            $('#register_form #email').val('');
+            $('#register_form #name').val('');
+        }
+    }
+    </script>
+    <script async defer src="https://apis.google.com/js/api.js"
+      onload="this.onload=function(){};handleClientLoad()"
+      onreadystatechange="if (this.readyState === 'complete') this.onload()">
+    </script>
+
+
+
+    <!-- Nav Location Sidebar Ends -->
+    <div class="aside-backdrop"></div>
+
+
+<script src="../js/jquery.min.js"></script>    
+<script type="text/javascript">
+        
+
+         $(window).on('load', function() {
+                $('#loading').fadeOut();
+                $('#Load').delay(0).fadeOut('slow');
+                $('body').delay(0).css({
+                    'overflow': 'visible'
+                });
+            })
+
+    </script>
+</body>
+
+</html>
